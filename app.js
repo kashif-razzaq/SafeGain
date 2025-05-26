@@ -11,10 +11,7 @@ const adminRoutes = require('./routes/admin');
 dotenv.config();
 require('dotenv').config();
 const app = express();
-const allowedOrigins = [  'http://localhost:3000', 
-  'http://localhost:5173',
-  'https://your-app-name.up.railway.app',
-  '*']; // your frontend URL
+const allowedOrigins = [  'https://safegain-frontend.vercel.app']; // your frontend URL
 app.use(cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
